@@ -88,6 +88,6 @@ $$
 
 
 
-where $\boldsymbol{\mu}_{n}= \mathrm{A}^{-1} \mathbf{b}$ and $\Sigma_{n}=\mathrm{A}^{-1}, \mathrm{A} =\sum_{i=1}^{n} \tau_{i} \mathbf{x}_{i} \mathbf{x}_{i}^{T}+\delta^{2} \mathbf{I}, \mathbf{b} =\sum_{i=1}^{n} \tau_{i} y_{i} \mathbf{x}_{i}$.
+where $\boldsymbol{\mu}_{n}= \mathrm{A}^{-1} \mathbf{b}$ and $\Sigma_{n}=\mathrm{A}^{-1}$, $\mathrm{A} =\sum_{i=1}^{n} \tau_{i} \mathbf{x}_{i} \mathbf{x}_{i}^{T}+\delta^{2} \mathbf{I}$, $\mathbf{b} =\sum_{i=1}^{n} \tau_{i} y_{i} \mathbf{x}_{i}$.
 
 <u>Note</u>: MH algorithm is also realizable in this case.
