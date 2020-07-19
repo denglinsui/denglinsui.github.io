@@ -1,0 +1,97 @@
+---
+title: "「Bayesian」2 Slice Sampler"
+subtitle: "Slice Sampler - Simpler/General and examples"
+layout: post
+author: "Linsui"
+header-style: text
+hidden: true
+tags:
+  - Bayesian
+  - 笔记
+---
+
+# Slice Sampler
+
+## Simple Slice Sampler
+
+The generation from a distribution with density $f(x)$ is equivalent to uniform generation on the subgraph of $f$,
+$$
+\mathscr{S}(f)=\{(x, u) ; 0 \leq u \leq f(x)\}
+$$
+and $f$ need only be known up to a normalizing constant.  
+
+We consider using a *random walk* on $\mathscr{S}(f)$ and this is slice sampling.
+
+### Algorithm
+
+1.  Move from $(x, u)$ to $\left(x, u^{\prime}\right)$ by
+
+$$
+u^{\prime} \mid x \sim \text { Uniform }\left(\left\{u: u \leq f_{1}(x)\right\}\right)
+$$
+
+2.  Move from $\left(x, u^{\prime}\right)$ to $\left(x^{\prime}, u^{\prime}\right)$ by
+
+$$
+x \mid u^{\prime} \sim \text { Uniform }\left(\left\{x: u^{\prime} \leq f_{1}(x)\right\}\right)
+$$
+
+<u>Note</u>: The uniform distribution on $\mathscr{S}(f)$ is indeed stationary for both steps. This algorithm will work well only if the exploration of the subgraph of $f_1$ by the corresponding random walk is fast enough.
+
+### Example
+
+#### Simple slice sampler   
+
+Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x>0)$
+
+- $U|x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$; 
+- $X| u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$
+
+#### Truncated normal distribution
+
+Generate from the density  $f(x) \propto f_{1}(x)=\exp \left\{-(x+3)^{2} / 2\right\} \mathbb{I}_{[0,1]}(x)$
+
+- $U|x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
+- $X|u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
+
+## The General Slice Sampler  
+
+Expressing the distribution of $u$ is always difficult, it inspires us to find a way to simplify this. 
+
+Suppose there is a decomposition of $f$:
+$$
+f(x) \propto \prod_{i=1}^{k} f_{i}(x)
+$$
+
+### Algorithm
+
+At iteration $t+1,$ simulate
+
+1. $\omega_{1}^{(t+1)} \sim \mathcal{U}_{\left[0, f_{1}\left(x^{(t)}\right)\right]}$
+
+   $\cdots$
+
+​            k. $\omega_{k}^{(t+1)} \sim \mathcal{U}_{\left[0, f_{k}\left(x^{(t)}\right)\right]}$
+​            k+1. $x^{(t+1)} \sim \mathcal{U}_{A^{(t+1)}},$ with
+$$
+A^{(t+1)}=\left\{y ; f_{i}(y) \geq \omega_{i}^{(t+1)}, i=1, \ldots, k\right\}
+$$
+<u>Note</u>: When $f_k$'s are simple, the expressions is tractable, but it happens that the intersection set is small.
+
+### Example
+
+#### A 3D slice sampler
+
+Generate from the density:
+$$
+f(x)=\exp \left(-x^{2} / 2\right) \times(1+\cos (\pi x)) \times \mathrm{I}(x \in[-0.5,0.5])
+$$
+
+- Step 1: generate $\omega|x$
+  - $\omega_1\sim U[0,\exp(-x^2/2)]$
+  - $\omega_2\sim U[0,1+\cos(\pi x)]$
+- Step 2: generate $x'|\omega$
+  - $I_1=[-\sqrt{-2\log(\omega_1)},\sqrt{-2\log(\omega_1)}]$
+  - $I_2=[\frac{\arccos(\omega_2'-1)}{\pi},\infty)$
+  - $I_3=[-0.5,0.5]$
+  - $x'\sim \boldsymbol{1}_{I_1\cap I_2\cap I_3}(x)$
