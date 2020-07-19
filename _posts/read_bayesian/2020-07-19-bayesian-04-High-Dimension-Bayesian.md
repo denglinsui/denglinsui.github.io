@@ -36,6 +36,8 @@ $$
 
 
 Hence, the full model is
+
+
 $$
 \begin{aligned}
 \mathbf{y} \mid \mu, \mathbf{X}, \boldsymbol{\beta}, \sigma^{2} & \sim N\left(\mu \mathbf{1}+\mathbf{X} \boldsymbol{\beta}, \sigma^{2} \mathbf{I}\right) \\
@@ -61,6 +63,8 @@ $$
 Analogous to the Bayesian Lasso, it's not a easy task to sample from the posterior directly. 
 
 Here, we introduce an integral (mixture of $x\sim\mathcal{N}(0,\sigma^2)$ and $1/\sigma^2\sim\Gamma(v/2,v/2)$):
+
+
 $$
 \int_{0}^{\infty} \frac{\sqrt{\tau}}{\sqrt{2 \pi}} \exp \left(-\tau x^{2} / 2\right) \times \frac{(v / 2)^{v / 2}}{\Gamma(v / 2)} \tau^{v / 2-1} e^{-v \tau / 2} d \tau
 $$
@@ -68,6 +72,8 @@ $$
 
 
 Thus, for robust regression $y_{i}=\mathbf{x}_{i}^{T} \boldsymbol{\beta}+\epsilon_{i}, v\sim t_v(0)$, the full model is:
+
+
 $$
 \begin{array}{c}
 y_{i} \sim N\left(\mathbf{x}_{i}^{T} \boldsymbol{\beta}, \sigma_{i}^{2}\right) \\
