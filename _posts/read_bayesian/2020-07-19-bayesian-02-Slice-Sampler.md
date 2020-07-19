@@ -44,15 +44,15 @@ $$
 
 Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x>0)$
 
-- $U|x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$; 
-- $X| u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$
+- $U\vert x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$; 
+- $X\vert u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$
 
 #### Truncated normal distribution
 
-Generate from the density  $f(x) \propto f_{1}(x)=\exp \left\{-(x+3)^{2} / 2\right\} \mathbb{I}_{[0,1]}(x)$
+Generate from the density  $f(x) \propto f_{1}(x)=\exp \left(-(x+3)^{2} / 2\right) \mathbb{I}_{[0,1]}(x)$
 
-- $U|x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
-- $X|u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
+- $U\vert x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
+- $X\vert u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
 
 ## The General Slice Sampler  
 
@@ -67,12 +67,12 @@ $$
 
 At iteration $t+1,$ simulate
 
-1. $\omega_{1}^{(t+1)} \sim \mathcal{U}_{\left[0, f_{1}\left(x^{(t)}\right)\right]}$
+1. $\omega_{1}^{(t+1)} \sim U_{\left[0, f_{1}\left(x^{(t)}\right)\right]}$
 
    $\cdots$
 
-​            k. $\omega_{k}^{(t+1)} \sim \mathcal{U}_{\left[0, f_{k}\left(x^{(t)}\right)\right]}$
-​            k+1. $x^{(t+1)} \sim \mathcal{U}_{A^{(t+1)}},$ with
+​            k. $\omega_{k}^{(t+1)} \sim U_{\left[0, f_{k}\left(x^{(t)}\right)\right]}$
+​            k+1. $x^{(t+1)} \sim U_{A^{(t+1)}},$ with
 $$
 A^{(t+1)}=\left\{y ; f_{i}(y) \geq \omega_{i}^{(t+1)}, i=1, \ldots, k\right\}
 $$
@@ -87,10 +87,10 @@ $$
 f(x)=\exp \left(-x^{2} / 2\right) \times(1+\cos (\pi x)) \times \mathrm{I}(x \in[-0.5,0.5])
 $$
 
-- Step 1: generate $\omega|x$
+- Step 1: generate $\omega\vert x$
   - $\omega_1\sim U[0,\exp(-x^2/2)]$
   - $\omega_2\sim U[0,1+\cos(\pi x)]$
-- Step 2: generate $x'|\omega$
+- Step 2: generate $x'\vert \omega$
   - $I_1=[-\sqrt{-2\log(\omega_1)},\sqrt{-2\log(\omega_1)}]$
   - $I_2=[\frac{\arccos(\omega_2'-1)}{\pi},\infty)$
   - $I_3=[-0.5,0.5]$

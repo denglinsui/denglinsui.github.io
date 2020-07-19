@@ -27,9 +27,9 @@ $$
 
 Move uniformly in one component at a time. Start at a point $(x, y, u)$ in $\mathcal{S}(f)$, we generate  
 
-1. $X$ along the $x$ -axis from the uniform distribution on $\{x: u \leq f(x, y)\}$
-2. $Y$ along the $y$ -axis from the uniform distribution on $\left\{y: u \leq f\left(x^{\prime}, y\right)\right\}$
-3. $U$ along the $u$ -axis from the uniform di stribution on $\left[0, f\left(x^{\prime}, y^{\prime}\right)\right]$
+1. $X$ along the $x$ -axis from the uniform distribution on $\lbrace x: u \leq f(x, y)\rbrace$
+2. $Y$ along the $y$ -axis from the uniform distribution on $\lbrace y: u \leq f\left(x^{\prime}, y\right)\rbrace$
+3. $U$ along the $u$ -axis from the uniform distribution on $\left[0, f\left(x^{\prime}, y^{\prime}\right)\right]$
 
 ### Algorithm for Two-Stage Gibbs Sampler
 
@@ -40,7 +40,7 @@ Take $X_{0}=x_{0}$. For $t=1,2, \ldots,$ generate
 
 ### Disccusion
 
-1. For slice sampler, if we treat $y$ as constant, then step 1. and step 3. is exactly step 1 in slice sampling, i.e. from $f(x|y)=f(x,y)/f(y)\propto f(x,y)$.
+1. For slice sampler, if we treat $y$ as constant, then step 1. and step 3. is exactly step 1 in slice sampling, i.e. from $f(x\vert y)=f(x,y)/f(y)\propto f(x,y)$.
 
 2. For slice sampler, the order $x-y-u$ can be changed.
 
@@ -53,7 +53,7 @@ Take $X_{0}=x_{0}$. For $t=1,2, \ldots,$ generate
 
 Consider a pair of random variables $(x,z)$, where $x$ is the observed part and $z$ is the missing part. 
 
-Their joint distribution is $f(x,z|\theta)$ and $g(x|\theta)=\int f(x,z|\theta)dz$. Then, the complete-data and imcomplete-data likelehood are:
+Their joint distribution is $f(x,z\vert \theta)$ and $g(x\vert \theta)=\int f(x,z\vert \theta)dz$. Then, the complete-data and imcomplete-data likelehood are:
 $$
 L^{c}(\theta \mid \mathbf{x}, \mathbf{z})=f(\mathbf{x}, \mathbf{z} \mid \theta) \text { and } L(\theta \mid \mathbf{x})=g(\mathbf{x} \mid \theta)
 $$
@@ -64,9 +64,9 @@ $$
 
 ### Gibbs sampler
 
-1. $\mathbf{z}|\theta \sim k(\mathbf{z} \mid \mathbf{x}, \theta)$
+1. $\mathbf{z}\vert \theta \sim k(\mathbf{z} \mid \mathbf{x}, \theta)$
 
-2. $\theta\left|\mathbf{z} \propto L^{c}(\theta \mid \mathbf{x}, \mathbf{z})\right.$
+2. $\theta\vert \mathbf{z} \propto L^{c}(\theta \mid \mathbf{x}, \mathbf{z})$
 
 ### EM Algorithm
 
@@ -87,7 +87,7 @@ $$
    1. EM algorithm integrals $z$;
    2. Gibbs sampler samples $z$.
 
-   Actually, in EM algorithm, $h(\theta)$ can be viewed as taking average likelihood according to the samples from $z|\theta$.
+   Actually, in EM algorithm, $h(\theta)$ can be viewed as taking average likelihood according to the samples from $z\vert \theta$.
 
 2. The step 2. of Gibbs sampler and EM algorithm is to update $\theta$. 
 

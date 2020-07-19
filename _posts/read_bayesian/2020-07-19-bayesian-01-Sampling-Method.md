@@ -1,15 +1,3 @@
----
-title: "「Bayesian」1 Sampling Method"
-subtitle: "Sampling Method - Rejection/MH/Langenvin/HMC/Stochastics HMC"
-layout: post
-author: "Linsui"
-header-style: text
-hidden: true
-tags:
-  - Bayesian
-  - 笔记
----
-
 # Sampling Method
 
 ## Rejection Sampling
@@ -39,10 +27,9 @@ function $\pi_u(x)$.
 
 1. Generate $Y_{t} \sim q\left(y \mid X^{(t)}\right)$
 
-2. Compute $\rho\left(X^{(t)}, Y_{t}\right)$ with $\rho(x, y)=\min \left\{1, \frac{\pi_{u}(y) q(x \mid y)}{\pi_{u}(x) q(y \mid x)}\right\}$
+2. Compute $\rho\left(X^{(t)}, Y_{t}\right)$ with $\rho(x, y)=\min \left(1, \frac{\pi_{u}(y) q(x \mid y)}{\pi_{u}(x) q(y \mid x)}\right)$
 
 3. Take
-
 $$
   X^{(t+1)}=\left\{\begin{array}{ll}
   Y_{t} & \text { with prob } \rho\left(X^{(t)}, Y_{t}\right) \\
@@ -52,10 +39,10 @@ $$
 
 ### Variants
 
-- **Symmetric Metropolis Algorithm**: $q(y|x)=q(x|y)$;
-- **Random Walk Metropolis-Hastings**: $q(y|x)=q(y-x)$;
-- **Indepencence Sampler**: $q(y|x)=q(y)$;
-- **Langevin algrithm**: $q(y|x)=N\left(X^t+(\delta / 2) \nabla \log \pi\left(X^{t}\right), \delta\right)$
+- **Symmetric Metropolis Algorithm**: $q(y\mid x)=q(x\mid y)$;
+- **Random Walk Metropolis-Hastings**: $q(y\mid x)=q(y-x)$;
+- **Indepencence Sampler**: $q(y\mid x)=q(y)$;
+- **Langevin algrithm**: $q(y\mid x)=N\left(X^t+(\delta / 2) \nabla \log \pi\left(X^{t}\right), \delta\right)$
 
 ### Discussion
 
@@ -67,7 +54,7 @@ $$
 
 - The MH chain satisfies the detailed balanced condition $K(y, x) \pi(y)=K(x, y) \pi(x)$.
 
-- Independence sampler requires $\pi(y) \leq M q(y)$$\pi(y) \leq M q(y)$, the acceptance probability is at least $1/M$ when stationary and MC is uniformly ergodic
+- Independence sampler requires $\pi(y) \leq M q(y)$, the acceptance probability is at least $1/M$ when stationary and MC is uniformly ergodic
   $$
   \left\|K^{n}(x, \cdot)-\pi\right\|_{T V} \leq 2\left(1-\frac{1}{M}\right)^{n}
   $$
@@ -82,6 +69,8 @@ Here, consider the Langevin diffusion $L_t$ defined by the stochastic differenti
 $$
 d L_{t}=d B_{t}+\frac{1}{2} \nabla \log \pi\left(L_{t}\right) d t
 $$
+
+
 where $B_t$ is a standard Brownian motion
 
 ### Algorithm
@@ -92,9 +81,8 @@ where $B_t$ is a standard Brownian motion
    $$
    \gamma(x, y)=\frac{\pi_{u}(y) \times \exp \left\{-\left\|x-y-\frac{\sigma^{2}}{2} \nabla \log \pi_{u}(y)\right\|^{2} /\left(2 \sigma^{2}\right)\right\}}{\pi_{u}(x) \times \exp \left\{-\left\|y-x-\frac{\sigma^{2}}{2} \nabla \log \pi_{u}(x)\right\|^{2} /\left(2 \sigma^{2}\right)\right\}}
    $$
-
+   
 3. Take
-
 $$
   X^{(t+1)}=\left\{\begin{array}{ll}
   Y_{t} & \text { with prob } \rho\left(X^{(t)}, Y_{t}\right) \\
@@ -123,7 +111,7 @@ To summary, we want to sample $x\sim\pi$, but we sample $(x,v)$ firstly and drop
 ### Algorithm
 
 1. Generate next $Y_t=X^{(t)}-\frac{\epsilon^{2}}{2} \frac{\partial U}{\partial x}\left(X^{(t)}\right)+\epsilon \mathbf{M}^{-1} v^{(t)}$
-2. Accept it with the probability $\min \left\{1, \exp \left(-H\left(x^{\prime}, v^{\prime}\right)+H(x, v)\right)\right\}$
+2. Accept it with the probability $\min \left(1, \exp \left(-H\left(x^{\prime}, v^{\prime}\right)+H(x, v)\right)\right)$
 
 ## Stochastic HMC
 
