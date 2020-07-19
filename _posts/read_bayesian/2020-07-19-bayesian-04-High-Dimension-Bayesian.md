@@ -20,16 +20,19 @@ $$
 $$
 
 
+
 The objective function is equivalent to maximizing  
 $$
 \prod_{i=1}^{n} \underbrace{\exp \left(-\left(y_{i}-\mathbf{x}_{i}^{T} \boldsymbol{\beta}\right)^{2} / 2\right) }_{likelihood}\times\underbrace{\exp \left(-\lambda \sum_{j=1}^{p}\left|\beta_{j}\right|\right)}_{prior}
 $$
 
 
+
 It's not easy to directly sample from the posterior. But it can be written as a mixture of normals, mixed with exponential distribution,
 $$
 \frac{a}{2} e^{-a|z|}=\int_{0}^{\infty} \frac{1}{\sqrt{2 \pi s}} e^{-z^{2} /(2 s)} \times \frac{a^{2}}{2} e^{-a^{2} s / 2} d s
 $$
+
 
 
 Hence, the full model is
@@ -54,12 +57,14 @@ f(t)=\frac{\Gamma((v+1) / 2)}{\sqrt{\pi v} \Gamma(v / 2)}\left(1+x^{2} / v\right
 $$
 
 
+
 Analogous to the Bayesian Lasso, it's not a easy task to sample from the posterior directly. 
 
 Here, we introduce an integral (mixture of $x\sim\mathcal{N}(0,\sigma^2)$ and $1/\sigma^2\sim\Gamma(v/2,v/2)$):
 $$
 \int_{0}^{\infty} \frac{\sqrt{\tau}}{\sqrt{2 \pi}} \exp \left(-\tau x^{2} / 2\right) \times \frac{(v / 2)^{v / 2}}{\Gamma(v / 2)} \tau^{v / 2-1} e^{-v \tau / 2} d \tau
 $$
+
 
 
 Thus, for robust regression $y_{i}=\mathbf{x}_{i}^{T} \boldsymbol{\beta}+\epsilon_{i}, v\sim t_v(0)$, the full model is:
@@ -72,6 +77,7 @@ y_{i} \sim N\left(\mathbf{x}_{i}^{T} \boldsymbol{\beta}, \sigma_{i}^{2}\right) \
 $$
 
 
+
 Then, the full conditional density for each variables is:
 $$
 \begin{aligned}
@@ -81,6 +87,7 @@ $$
 $$
 
 
-where $\boldsymbol{\mu}_{n}= \mathrm{A}^{-1} \mathbf{b} \text { and } \Sigma_{n}=\mathrm{A}^{-1}, \mathrm{A} =\sum_{i=1}^{n} \tau_{i} \mathbf{x}_{i} \mathbf{x}_{i}^{T}+\delta^{2} \mathbf{I}, \mathbf{b} =\sum_{i=1}^{n} \tau_{i} y_{i} \mathbf{x}_{i}$.
+
+where $\boldsymbol{\mu}_{n}= \mathrm{A}^{-1} \mathbf{b}$ and $\Sigma_{n}=\mathrm{A}^{-1}, \mathrm{A} =\sum_{i=1}^{n} \tau_{i} \mathbf{x}_{i} \mathbf{x}_{i}^{T}+\delta^{2} \mathbf{I}, \mathbf{b} =\sum_{i=1}^{n} \tau_{i} y_{i} \mathbf{x}_{i}$.
 
 <u>Note</u>: MH algorithm is also realizable in this case.

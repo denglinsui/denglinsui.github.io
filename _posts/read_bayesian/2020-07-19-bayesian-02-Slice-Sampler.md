@@ -51,8 +51,8 @@ Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x>0)$
 
 Generate from the density  $f(x) \propto f_{1}(x)=\exp \left(-(x+3)^{2} / 2\right) \mathbb{I}_{[0,1]}(x)$
 
-- $U\vert x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
-- $X\vert u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
+- $U\vert x \sim \mathcal{U}\left(0, \exp \lbrace -(x+3)^{2} / 2\rbrace\right)$
+- $X\vert u\sim\mathcal{U}\lbrace y ; \exp \lbrace-(y+3)^{2} / 2\rbrace \geq u\rbrace\cap[0,1]$
 
 ## The General Slice Sampler  
 
@@ -72,10 +72,13 @@ At iteration $t+1,$ simulate
    $\cdots$
 
 ​            k. $\omega_{k}^{(t+1)} \sim U_{\left[0, f_{k}\left(x^{(t)}\right)\right]}$
+
 ​            k+1. $x^{(t+1)} \sim U_{A^{(t+1)}},$ with
 $$
 A^{(t+1)}=\left\{y ; f_{i}(y) \geq \omega_{i}^{(t+1)}, i=1, \ldots, k\right\}
 $$
+
+
 <u>Note</u>: When $f_k$'s are simple, the expressions is tractable, but it happens that the intersection set is small.
 
 ### Example

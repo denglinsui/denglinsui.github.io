@@ -102,9 +102,9 @@ $$
 
 ### Goal
 
-Target distribution $\pi(x)\propto\exp(-U(x))$, $U(x)$ is a potential. Augment the parameter space $\mathcal{X}$ to $\mathcal{X}\times\mathcal{V}$ and the target distribution $\pi(x)$ to the *canonical distribution* $\pi(x,v)=\pi(v|x)\pi(x)$. 
+Target distribution $\pi(x)\propto\exp(-U(x))$, $U(x)$ is a potential. Augment the parameter space $\mathcal{X}$ to $\mathcal{X}\times\mathcal{V}$ and the target distribution $\pi(x)$ to the *canonical distribution* $\pi(x,v)=\pi(v\mid x)\pi(x)$. 
 
-For simplicity $\pi(v \mid x) \propto \exp \left(-v^{T} \mathbf{M}^{-1} v\right)$. Define the *Hamiltionian * as $H(x, v)=-\log \pi(x, v)$.
+For simplicity $\pi(v \mid x) \propto \exp \left(-v^{T} \mathbf{M}^{-1} v\right)$. Define the Hamiltionian as $H(x, v)=-\log \pi(x, v)$.
 
 To summary, we want to sample $x\sim\pi$, but we sample $(x,v)$ firstly and drop $v$. Then, the marginal is still the target distribution.
 
