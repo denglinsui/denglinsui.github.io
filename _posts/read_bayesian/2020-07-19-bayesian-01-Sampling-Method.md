@@ -1,3 +1,15 @@
+---
+title: "「Bayesian」1 Sampling Method"
+subtitle: "Slice Sampling - Rejection/MH/Langenvin/HMC/Stochastic HMC"
+layout: post
+author: "Linsui"
+header-style: text
+hidden: true
+tags:
+  - Bayesian
+  - 笔记
+---
+
 # Sampling Method
 
 ## Rejection Sampling
@@ -30,6 +42,7 @@ function $\pi_u(x)$.
 2. Compute $\rho\left(X^{(t)}, Y_{t}\right)$ with $\rho(x, y)=\min \left(1, \frac{\pi_{u}(y) q(x \mid y)}{\pi_{u}(x) q(y \mid x)}\right)$
 
 3. Take
+
 $$
   X^{(t+1)}=\left\{\begin{array}{ll}
   Y_{t} & \text { with prob } \rho\left(X^{(t)}, Y_{t}\right) \\
@@ -81,8 +94,9 @@ where $B_t$ is a standard Brownian motion
    $$
    \gamma(x, y)=\frac{\pi_{u}(y) \times \exp \left\{-\left\|x-y-\frac{\sigma^{2}}{2} \nabla \log \pi_{u}(y)\right\|^{2} /\left(2 \sigma^{2}\right)\right\}}{\pi_{u}(x) \times \exp \left\{-\left\|y-x-\frac{\sigma^{2}}{2} \nabla \log \pi_{u}(x)\right\|^{2} /\left(2 \sigma^{2}\right)\right\}}
    $$
-   
+
 3. Take
+
 $$
   X^{(t+1)}=\left\{\begin{array}{ll}
   Y_{t} & \text { with prob } \rho\left(X^{(t)}, Y_{t}\right) \\
@@ -133,5 +147,4 @@ d x=\mathrm{M}^{-1} v d t \\
 d v=-\nabla U(x) d t-\mathrm{BM}^{-1} v d t+(2 \mathrm{B})^{1 / 2} d B_{t}
 \end{array}
 $$
-
 
