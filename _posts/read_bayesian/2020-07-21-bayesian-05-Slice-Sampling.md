@@ -65,15 +65,15 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](D:/MyInfo/website/denglinsui.github.io/_posts/read_bayesian/2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/sample12-1.png)
+![](2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/sample12-1.png)
 
 Generate from the truncated normal density
 ------------------------------------------
 
 Our target density is: $f(x) \propto f_{1}(x)=\exp \{-(x+3)^{2} / 2\} \mathbb{I}_{[0,1]}(x)$
 
-- $U\mid x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
-- $X\mid u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
+- $U\mid x \sim \mathcal{U}\left(0, \exp \{-(x+3)^{2} / 2\}\right)$
+- $X\mid u\sim\{y ; \exp \{-(y+3)^{2} / 2\} \geq u\}\cap[0,1]$
 
 Define the specific values for generating the uniform distribution.
 
@@ -114,7 +114,7 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](D:/MyInfo/website/denglinsui.github.io/_posts/read_bayesian/2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/sample22-1.png)
+![](2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/sample22-1.png)
 
 A 3D slice sampler
 ------------------
@@ -130,7 +130,7 @@ $$
   - $\omega_2\sim U[0,1+\cos(\pi x)]$
 - Step 2: generate $x'\mid \omega$
   - $I_1=[-\sqrt{2\log(\omega_1)},\sqrt{2\log(\omega_1)}]$
-  - $I_2=[\frac{\arccos(\omega_2'-1)}{\pi},\infty)$
+  - $I_2=[-\frac{\arccos(\omega_2'-1)}{\pi},\frac{\arccos(\omega_2'-1)}{\pi}]$
   - $I_3=[-0.5,0.5]$
   - $x'\sim \boldsymbol{1}_A(x)$
 
@@ -193,4 +193,4 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](D:/MyInfo/website/denglinsui.github.io/_posts/read_bayesian/2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/plot3-1.png)
+![](2020-07-21-bayesian-Slice-Sampling_files/figure-markdown_strict/plot3-1.png)
