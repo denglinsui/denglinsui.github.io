@@ -1,6 +1,6 @@
 ---
 title: "「Bayesian」1 Sampling Method"
-subtitle: "Slice Sampling - Rejection/MH/Langenvin/HMC/Stochastic HMC"
+subtitle: "Sampling Method - Rejection/MH/Langenvin/HMC/Stochastic HMC"
 layout: post
 author: "Linsui"
 header-style: text
