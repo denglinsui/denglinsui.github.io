@@ -20,8 +20,10 @@ library(ggplot2)
 set.seed(0)
 ```
 
-Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x>0)$
+Generate from the density 
 ---------------------------------------------------------------------------
+
+Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x>0)$: 
 
 - $U\mid x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$; 
 - $X\mid u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$
@@ -68,10 +70,10 @@ ggplot(data=X_U)+
 Generate from the truncated normal density
 ------------------------------------------
 
-Our target density is: $f(x) \propto f_{1}(x)=\exp \left\{-(x+3)^{2} / 2\right\} \mathbb{I}_{[0,1]}(x)$
+Our target density is: $f(x) \propto f_{1}(x)=\exp \{-(x+3)^{2} / 2\} \mathbb{I}_{[0,1]}(x)$
 
-- $U|x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
-- $X|u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
+- $U\mid x \sim \mathcal{U}\left(0, \exp \left\{-(x+3)^{2} / 2\right\}\right)$
+- $X\mid u\sim\left\{y ; \exp \left\{-(y+3)^{2} / 2\right\} \geq u\right\}\cap[0,1]$
 
 Define the specific values for generating the uniform distribution.
 
@@ -123,10 +125,10 @@ f(x)=\exp \left(-x^{2} / 2\right) \times(1+\cos (\pi x)) \times \mathrm{I}(x \in
 $$
 
 
-- Step 1: generate $\omega|x$
+- Step 1: generate $\omega\mid x$
   - $\omega_1\sim U[0,\exp(-x^2/2)]$
   - $\omega_2\sim U[0,1+\cos(\pi x)]$
-- Step 2: generate $x'|\omega$
+- Step 2: generate $x'\mid \omega$
   - $I_1=[-\sqrt{2\log(\omega_1)},\sqrt{2\log(\omega_1)}]$
   - $I_2=[\frac{\arccos(\omega_2'-1)}{\pi},\infty)$
   - $I_3=[-0.5,0.5]$
