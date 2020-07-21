@@ -65,7 +65,7 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](img/in-post/Bayesian/sample12-1.png)
+![](/img/in-post/Bayesian/sample12-1.png)
 
 Generate from the truncated normal density
 ------------------------------------------
@@ -114,7 +114,7 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](img/in-post/Bayesian/sample22-1.png)
+![](/img/in-post/Bayesian/sample22-1.png)
 
 A 3D slice sampler
 ------------------
@@ -193,4 +193,4 @@ ggplot(data=X_U)+
   geom_line(aes(x=X,y=U_line),size=1)
 ```
 
-![](img/in-post/Bayesian/plot3-1.png)
+![](/img/in-post/Bayesian/plot3-1.png)
