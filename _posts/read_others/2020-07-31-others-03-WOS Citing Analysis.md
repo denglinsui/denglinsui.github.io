@@ -1,17 +1,17 @@
+---
 title: "「Others」3 WOS Citation Analysis"
-subtitle: "WOS Citation Analysis - Data Collection"
+subtitle: "WoS Citation Analysis - Data Collection"
 layout: post
 author: "Linsui"
 header-style: text
 hidden: true
 tags:
-
   - Paper
   - Others
   - Web of Science
   - Network
-
-# WOS Citation Analysis
+---
+# WoS Citation Analysis
 
 ## 数据收集的说明
 
@@ -39,8 +39,8 @@ tags:
 - [WOS website](http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&search_mode=GeneralSearch&SID=7CROEqv8cv1x71Ns9tb&preferencesSaved=)
 - [python爬取WOS数据](https://mp.weixin.qq.com/s/XdZrUx22jwhJPkcDOnzrrw)
 - [WOS_Crawler](https://github.com/tomleung1996/wos_crawl)
-- [Clickstream Data Yields High-Resolution Maps of Science](https://doi.org/10.1371/journal.pone.0004803) 
-- [Mapping the Structure and Evolution of Science](https://grants.nih.gov/grants/km/oerrm/oer_km_events/borner.pdf) 
+- [Clickstream Data Yields High-Resolution Maps of Science](https://doi.org/10.1371/journal.pone.0004803)
+- [Mapping the Structure and Evolution of Science](https://grants.nih.gov/grants/km/oerrm/oer_km_events/borner.pdf)
 - [How to download Web of Science data for Bibliometrics Research](http://cluster.ischool.drexel.edu/~cchen/citespace/doc/tutorial/how_to/1.download_from_WOS.pdf)
 - [Mapping the Backbone of Science](https://www.researchgate.net/publication/220365044_Mapping_the_Backbone_of_Science)
-- [Google Scholar - A new data source for citation analysis](https://harzing.com/publications/white-papers/google-scholar-a-new-data-source-for-citation-analysis) 
+- [Google Scholar - A new data source for citation analysis](https://harzing.com/publications/white-papers/google-scholar-a-new-data-source-for-citation-analysis)
