@@ -19,30 +19,28 @@ The generation from a distribution with density $f(x)$ is equivalent to uniform 
 
 
 $$
-\mathscr{S}(f)=\{(x, u) ; 0 \leq u \leq f(x)\}
+\mathscr{S}(f)=\lbrace(x, u) ; 0 \leq u \leq f(x)\rbrace
 $$
 
 
 and $f$ need only be known up to a normalizing constant.  
 
-We consider using a *random walk* on $\mathscr{S}(f)$ and this is slice sampling.
+We consider using a *random walk* on $\mathscr{S}(f)$  and this is slice sampling.
 
 ### Algorithm
 
 1. Move from $(x, u)$ to $\left(x, u^{\prime}\right)$ by
 
-   
 
 $$
-u^{\prime} \mid x \sim \text { Uniform }\left(\left\{u: u \leq f_{1}(x)\right\}\right)
+u^{\prime} \mid x \sim \text { Uniform }\lbrace(\{u: u \leq f_{1}(x)\}\rbrace
 $$
 
 2. Move from $\left(x, u^{\prime}\right)$ to $\left(x^{\prime}, u^{\prime}\right)$ by
 
-   
 
 $$
-x \mid u^{\prime} \sim \text { Uniform }\left(\left\{x: u^{\prime} \leq f_{1}(x)\right\}\right)
+x \mid u^{\prime} \sim \text { Uniform }\left(\lbrace x: u^{\prime} \leq f_{1}(x)\rbrace\right)
 $$
 
 <u>Note</u>: The uniform distribution on $\mathscr{S}(f)$ is indeed stationary for both steps. This algorithm will work well only if the exploration of the subgraph of $f_1$ by the corresponding random walk is fast enough.
