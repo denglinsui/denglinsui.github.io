@@ -16,22 +16,30 @@ tags:
 ## Simple Slice Sampler
 
 The generation from a distribution with density $f(x)$ is equivalent to uniform generation on the subgraph of $f$,
+
+
 $$
 \mathscr{S}(f)=\{(x, u) ; 0 \leq u \leq f(x)\}
 $$
+
+
 and $f$ need only be known up to a normalizing constant.  
 
 We consider using a *random walk* on $\mathscr{S}(f)$ and this is slice sampling.
 
 ### Algorithm
 
-1.  Move from $(x, u)$ to $\left(x, u^{\prime}\right)$ by
+1. Move from $(x, u)$ to $\left(x, u^{\prime}\right)$ by
+
+   
 
 $$
 u^{\prime} \mid x \sim \text { Uniform }\left(\left\{u: u \leq f_{1}(x)\right\}\right)
 $$
 
-2.  Move from $\left(x, u^{\prime}\right)$ to $\left(x^{\prime}, u^{\prime}\right)$ by
+2. Move from $\left(x, u^{\prime}\right)$ to $\left(x^{\prime}, u^{\prime}\right)$ by
+
+   
 
 $$
 x \mid u^{\prime} \sim \text { Uniform }\left(\left\{x: u^{\prime} \leq f_{1}(x)\right\}\right)
