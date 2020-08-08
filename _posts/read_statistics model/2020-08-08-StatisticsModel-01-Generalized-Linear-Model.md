@@ -23,9 +23,9 @@ For example, when the response is not normal, e.g. binary data, the linear model
 
 Both of OLM and GLM use the **linear predictor** $\eta=x^\top \beta$  through $\mu=\mathbb{E}(y)$.
 
-| $y\sim\mathcal{N}(\mu,\sigma)$ | $f(y ; \theta, \phi)=\exp \left\{\frac{y \theta-b(\theta)}{\phi}+c(y ; \phi)\right\}$ |
+|              OLM               |                             GLM                              |
 | :----------------------------: | :----------------------------------------------------------: |
-|                                |                                                              |
+| $y\sim\mathcal{N}(\mu,\sigma)$ | $f(y ; \theta, \phi)=\exp \{ \frac{y \theta-b(\theta)}{\phi}+c(y ; \phi)\}$ |
 |           $\mu=\eta$           |                        $\eta=g(\mu)$                         |
 
 where $\theta$  depends on the **linear predictor**, the **dispersion parameter** $\phi$ is
@@ -39,7 +39,7 @@ The GLM extend the distribution of $y$ from the normal distribution to the expon
 
 - Moment-generating function: $M(t)=\exp \{b(\theta+t \phi)-b(\theta)\}$
 - Mean: $\mathrm{E}(Y)=b^{\prime}(\theta)=\mu$
-- Variance: $\operatorname{var}(Y)=\phi b^{\prime \prime}(\theta)=\phi b^{\prime \prime}\left\{b^{\prime-1}(\mu)\right\}=\phi V(\mu)$
+- Variance: $\operatorname{var}(Y)=\phi b^{\prime \prime}(\theta)=\phi b^{\prime \prime}\{b^{\prime-1}(\mu)\}=\phi V(\mu)$
 
 where $V(\mu)$ is the **variance function**. 
 
@@ -50,9 +50,13 @@ where $V(\mu)$ is the **variance function**.
 The link function provides the relationship between the linear predictor and the mean of the distribution function.  
 
 The link function $g$ should remove restrictions on $\mu$ by mapping to $\eta$:
+
+
 $$
 \eta_i=g(\mu_i)
 $$
+
+
 **Canonical link**: $\eta=\theta=b'^{-1}(\mu)$. When $\phi$ is known, the model is a natural exponential family.
 
 ## Estimation and Inference
@@ -63,7 +67,9 @@ $$
 
 To estimate $\beta$, with Chain rule, we solve the equation:
 $$
+\begin{equation}
 \frac{\partial \ell(\beta)}{\partial \beta}=\frac{\partial \eta^{\mathrm{T}}}{\partial \beta} \frac{\partial \theta}{\partial \eta^{\mathrm{T}}} \frac{\partial \ell}{\partial \theta^{\mathrm{T}}}=X^{\mathrm{T}} u(\beta)
+\end{equation}
 $$
 $\beta$ and $\theta$ interacts through $\eta=X^\top\beta$.  That is, $\beta-\eta-\mu-\theta$.
 
