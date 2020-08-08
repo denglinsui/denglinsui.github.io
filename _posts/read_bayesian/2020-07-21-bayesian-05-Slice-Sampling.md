@@ -8,6 +8,7 @@ hidden: true
 tags:
   - Bayesian
   - R language
+  - Course
   - 笔记
 ---
 

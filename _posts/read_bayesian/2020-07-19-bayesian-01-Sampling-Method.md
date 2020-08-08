@@ -7,6 +7,7 @@ header-style: text
 hidden: true
 tags:
   - Bayesian
+  - Course
   - 笔记
 ---
 
