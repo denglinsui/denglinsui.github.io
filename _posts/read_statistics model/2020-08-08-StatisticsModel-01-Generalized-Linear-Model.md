@@ -50,9 +50,13 @@ where $V(\mu)$ is the **variance function**.
 The link function provides the relationship between the linear predictor and the mean of the distribution function.  
 
 The link function $g$ should remove restrictions on $\mu$ by mapping to $\eta$:
+
+
 $$
 \eta_i=g(\mu_i)
 $$
+
+
 **Canonical link**: $\eta=\theta=b'^{-1}(\mu)$. When $\phi$ is known, the model is a natural exponential family.
 
 ## Estimation and Inference
@@ -62,29 +66,43 @@ $$
 #### Estimation of $\beta$
 
 To estimate $\beta$, with Chain rule, we solve the equation:
+
+
 $$
 \begin{array}{l}
 \frac{\partial \ell(\beta)}{\partial \beta}=\frac{\partial \eta^{\mathrm{T}}}{\partial \beta} \frac{\partial \theta}{\partial \eta^{\mathrm{T}}} \frac{\partial \ell}{\partial \theta^{\mathrm{T}}}=X^{\mathrm{T}} u(\beta)
 \end{array}
 $$
+
+
 $\beta$ and $\theta$ interacts through $\eta=X^\top\beta$.  That is, $\beta-\eta-\mu-\theta$.
 
 For the exponential familiy, the elements of score statistics $u(\beta)$ and weighted matrix $W(\beta)$  are
+
+
 $$
 \begin{array}{l}
 u_{j}=\frac{\partial \theta_{j}}{\partial \eta_{j}} \frac{\partial \ell_{j}\left(\theta_{j}\right)}{\partial \theta_{j}}=\frac{y_{j}-\mu_{j}}{g^{\prime}\left(\mu_{j}\right) \phi_{j} V\left(\mu_{j}\right)} \\
 w_{j}=\left(\frac{\partial \theta_{j}}{\partial \eta_{j}}\right)^{2} \frac{\partial^{2} \ell_{j}\left(\theta_{j}\right)}{\partial \theta_{j}^{2}}=\frac{1}{g^{\prime}\left(\mu_{j}\right)^{2} \phi_{j} V\left(\mu_{j}\right)}
 \end{array}
 $$
+
+
 So, given $I(\beta)=X(\beta)^{\mathrm{T}} W(\beta) X(\beta)$, we can find $\beta$ by iterative weighted least squres mothod:
+
+
 $$
 \widehat{\beta} \doteq \beta+I(\beta)^{-1} \frac{\partial \eta^{\mathrm{T}}(\beta)}{\partial \beta} u(\beta)
 $$
+
+
 In this case,  $y$ is a possible initial value for $\mu$  and $g(y)$ is for $\eta$.
 
 #### Inference of $\beta$
 
 Under regularity conditions,
+
+
 $$
 \widehat{\beta}\dot{\sim}\mathcal{N}(\beta,(X^\top WX)^{-1})
 $$
@@ -98,11 +116,15 @@ At the discussion above, we assume $\phi_j$ are known. But if they are unknown a
 Note that,  $\phi=\operatorname{var}\left(y_{j}\right) /\{a_{j} V\left(\mu_{j}\right)\}$.
 
 If $\beta$ were known,
+
+
 $$
 \widehat{\phi}=\frac{1}{n} \sum_{j=1}^{n} \frac{\left(y_{j}-\mu_{j}\right)^{2}}{a_{j} V\left(\widehat{\mu}_{j}\right)}
 $$
 
 If $\beta$ were unkown,
+
+
 $$
 \widehat{\phi}=\frac{1}{n-p} \sum_{j=1}^{n} \frac{\left(y_{j}-\widehat{\mu}_{j}\right)^{2}}{a_{j} V\left(\widehat{\mu}_{j}\right)}
 $$
@@ -131,6 +153,7 @@ $$
 #### Full Model v.s. Reduced Model
 
 For model A and model B:
+
 $$
 D_a-D_B\dot{\sim} \chi^2_{p_A-p_B}
 $$
