@@ -13,6 +13,8 @@ tags:
 
 # Generalized Linear Model
 
+Since there are some problems about mathjax, I also upload the pdf version <a href="denglinsui.github.io/_posts/read_statistics model/2020-08-08-StatisticsModel-01-Generalized-Linear-Model.pdf" target="_blank">Statistics Model」1 Generalized Linear Model</a>.
+
 ## Why do we need GLM?
 
 Ordinary linear regression predicts the expected value of a given unknown quantity as a linear combination of a set of observed values. This is appropriate when the response variable has a normal distribution.  However, these assumptions are inappropriate for some types of response variables.
