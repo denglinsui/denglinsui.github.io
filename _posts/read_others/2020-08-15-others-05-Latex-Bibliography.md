@@ -44,6 +44,14 @@ tags:
 
 *Note*：这里的`plain`指的是参考文献呈现的格式，如果对应需要得到符合某期刊的参考文献格式，需要得到对应的`bst`文件，并采用这种格式。
 
+## Endnote导出bib文件
+
+- 采用顺序`Edit->Output Styles->Open Style Manager->Chose BibTex Export；`
+- 在`Output Style`中可以选取`BibTeX Export`作为默认输出，或者在`Export`中选择`BibTeX Export`；
+- 导出的时候label是按照导入顺序编号的，如果需要改的话，在`Edit->Output Styles`来编辑输出格式：
+  - 如果在保存的时候，一直出现`save as`，更改`Edit->Preference->Folder Locations->Style Folder`存储的位置，不要存储在默认位置；
+  - 可以将`Label`作为引用时需要的label。
+
 # References
 
 - https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html

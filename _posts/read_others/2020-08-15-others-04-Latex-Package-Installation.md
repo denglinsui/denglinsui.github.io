@@ -1,5 +1,5 @@
 ---
-title: "「Others」3 Latex Pakage Installation"
+title: "「Others」4 Latex Pakage Installation"
 subtitle: "Latex Pakage Installation - Manual"
 layout: post
 author: "Linsui"
@@ -27,7 +27,7 @@ tags:
 
 - 在[Latex宏包网站](https://www.ctan.org/pkg)中下载所需要的包xxx并进行解压
 - 在cmd中进入解压目录
-- 运行latex xxx.ins就会生成相应的lsy文件
+- 运行`latex xxx.ins`就会生成相应的lsy文件 或者  运行`tex xxx.dtx`就会生成相应的lsy文件
 - 将对应文件夹移到包的文件夹位置```...\mitex\tex\latex```
 - 最后在**MiKTeX Console**中选择```Refresh Database```
 
