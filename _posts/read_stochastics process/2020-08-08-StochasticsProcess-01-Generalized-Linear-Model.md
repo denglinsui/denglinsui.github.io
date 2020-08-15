@@ -13,6 +13,8 @@ tags:
 
 # Linear filters	
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/01.pdf" target="_blank">「Stochastics Process」1 Linear Filters</a>.
+
 ## Linear time invariant filters
 
 > **Linear filters** process time-varying input signals to produce output signals, subject to the constraint of [linearity](https://en.wikipedia.org/wiki/Linearity).

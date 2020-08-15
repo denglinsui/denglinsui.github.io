@@ -13,6 +13,8 @@ tags:
 
 # Overdispersion
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StatisticsModel/03.pdf" target="_blank">「Statistics Model」3 Overdispersion</a>.
+
 ## Definition
 
 **Overdispersion**: Models with over-large deviances and residuals, but otherwise showing no systematic lack of fit. Structure in the data is obscured by additional noise, so overdispersion increases uncertainty.  

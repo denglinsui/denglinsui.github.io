@@ -13,6 +13,8 @@ tags:
 
 # Gibbs Sampler
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/03.pdf" target="_blank">「Bayesian」3 Gibbs Sampler</a>.
+
 Gibbs sampler is a generalization of slice sampler. It isn't limited to the uniform distribution of subgraph. 
 
 Gibbs sampler uses the true conditional distributions, *full conditional distribution*, associated with the target distribution to generate from that distribution.

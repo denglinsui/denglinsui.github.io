@@ -13,6 +13,8 @@ tags:
 
 # Count Data
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StatisticsModel/02.pdf" target="_blank">「Statistics Model」2 Count Data</a>.
+
 The count data comes from Poisson:
 $$
 Y\sim P(\mu)

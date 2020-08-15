@@ -13,6 +13,8 @@ tags:
 
 # High-Dimensional Bayesian
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/04.pdf" target="_blank">「Bayesian」4 High-Dimensional Bayesian</a>.
+
 ## Bayesian Lasso
 
 Lasso minimizes the penalized least squares to achieve *sparsity*  

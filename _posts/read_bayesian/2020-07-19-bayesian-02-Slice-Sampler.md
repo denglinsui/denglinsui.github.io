@@ -13,6 +13,8 @@ tags:
 
 # Slice Sampler
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/02.pdf" target="_blank">「Bayesian」2 Slice Sampler</a>.
+
 ## Simple Slice Sampler
 
 The generation from a distribution with density $f(x)$ is equivalent to uniform generation on the subgraph of $f$,

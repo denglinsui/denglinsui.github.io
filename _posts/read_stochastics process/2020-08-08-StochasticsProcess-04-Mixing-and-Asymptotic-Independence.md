@@ -13,7 +13,9 @@ tags:
 
 # Mixing and Asymptotic Independence
 
- In this part, we care about:
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/03.pdf" target="_blank">Stochastics Process」4 Mixing and Asymptotic Independence</a>. 
+
+In this part, we care about:
 
 - Predictability
 - Asymptotic Independence and hence generalized central limit theorem.
