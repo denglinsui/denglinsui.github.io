@@ -13,7 +13,7 @@ tags:
 
 # Generalized Linear Model
 
-Since there are some problems about mathjax, I also upload the pdf version <a href="denglinsui.github.io/_posts/read_statistics model/2020-08-08-StatisticsModel-01-Generalized-Linear-Model.pdf" target="_blank">Statistics Model」1 Generalized Linear Model</a>.
+Since there are some problems about mathjax, I also upload the pdf version <a href="2020-08-08-StatisticsModel-01-Generalized-Linear-Model.pdf" target="_blank">Statistics Model」1 Generalized Linear Model</a>.
 
 ## Why do we need GLM?
 
