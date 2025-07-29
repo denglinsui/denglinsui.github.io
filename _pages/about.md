@@ -7,6 +7,10 @@ redirect_from:
   - /about.html
 ---
 
+I am a postdoctoral researcher at [School of Data Science, Chinese University of Hong Kong (Shen Zhen)](https://sds.cuhk.edu.cn) under the under the supervision of Professor [C. F. Jeff Wu](https://myweb.cuhk.edu.cn/jeffwu) and Professor [Jianhua Huang](https://sds.cuhk.edu.cn/en/teacher/470). Before that, I received my Ph.D. degree in [Institute of Statistics and Big Data, Renmin University of China](http://isbd.ruc.edu.cn) in 2019, where I was fortunate to be advised by Professor [Kejun He](http://isbd.ruc.edu.cn/sztd/c649d51f7a9d4557b25db81b705037e1.htm) and Professor [Xianyan Zhang](https://zhangxiany-tamu.github.io/).
+
+My research interests focus on multiple testing, feature selection, network data analysis, high-dimensional statistics, bioinformatics, and Mendelian randomization. I am also interested in blackbox optimization and uncertainty quantification. The motivation behind my work lies in both biology and industry, where statistical methods can provide valuable insights for large-scale biological data analysis and inform decision making in industrial settings.
+
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
  You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
