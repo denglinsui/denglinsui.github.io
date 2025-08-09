@@ -1,5 +1,4 @@
 ---
-​---
 title: "Powerful Spatial Multiple Testing via Borrowing Neighboring Information"
 collection: publications
 category: manuscripts

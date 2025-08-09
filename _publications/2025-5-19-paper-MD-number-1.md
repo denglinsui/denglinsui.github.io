@@ -1,5 +1,4 @@
 ---
-​---
 title: "Multiplex Depth for Network-Valued Data and Applications"
 collection: publications
 category: manuscripts
