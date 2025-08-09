@@ -1,0 +1,13 @@
+---
+title: "Joint mirror procedure: Controlling false discovery rate for identifying simultaneous signals"
+collection: publications
+category: manuscripts
+permalink: /publication/2024-12-01-paper-JM-number-1
+excerpt: 'In many applications, the process of identifying a specific feature of interest often involves testing multiple hypotheses for their joint statistical significance. Examples include mediation analysis, which simultaneously examines the existence of the exposure-mediator and the mediator-outcome effects, and replicability analysis, aiming to identify simultaneous signals that exhibit statistical significance across multiple independent studies. In this work, we present a new approach called the joint mirror (JM) procedure that effectively detects such features while maintaining false discovery rate (FDR) control in finite samples.'
+date: 2024-12-01
+venue: 'Biometrics'
+slidesurl: 'http://denglinsui.github.io/files/SlidesJMirror.pdf'
+paperurl: 'https://academic.oup.com/biometrics/article/80/4/ujae142/7923040'
+reproduceurl: 'https://github.com/denglinsui/2dSMT-manuscript-sourcecode'
+---
+The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
