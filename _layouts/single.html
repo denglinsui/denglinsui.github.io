@@ -49,9 +49,9 @@ layout: default
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Paper</a> | <a href="{{ page.slidesurl }}">Slides</a> | <a href="{{ page.bibtexurl }}">Bibtex</a></p>
-        {% elsif page.paperurl and page.slidesurl and softwareurl and reproduceurl %}
+        {% elsif page.paperurl and page.slidesurl and page.softwareurl and page.reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.paperurl }}">Paper</a><a href="{{ page.slidesurl }}">Slides</a> | <a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
-        {% elsif page.paperurl and softwareurl and reproduceurl %}
+        {% elsif page.paperurl and page.softwareurl and page.reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.paperurl }}">Paper</a><a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Paper</a> | <a href="{{ page.slidesurl }}">Slides</a></p>
@@ -69,7 +69,7 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.paperurl }}">Paper</a> | <a href="{{ page.bibtexurl }}">Bibtex</a></p>
         {% elsif page.citation and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Bibtex</a></p>
-        {% elsif page.slidesurl and softwareurl and reproduceurl %}
+        {% elsif page.slidesurl and page.softwareurl and page.reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Slides</a> | <a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
         {% elsif softwareurl and reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
