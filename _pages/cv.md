@@ -17,9 +17,13 @@ Education
 Work experience
 ======
 * 2024 Sep to Now: Postdoctoral Researcher, The Chinse University of Hong Kong (Shenzhen)
+
 * 2018 Summer: Investment Assistant (Intern), YUEXIU Industrial Investment Fund Management Co., Ltd.
+
+  
 Publications
 ======
+  
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
