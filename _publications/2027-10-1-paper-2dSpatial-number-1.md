@@ -1,5 +1,5 @@
 ---
-title: "Powerful Spatial Multiple Testing via Borrowing Neighboring Information"
+title: "Powerful spatial multiple testing via borrowing neighboring information"
 collection: publications
 category: manuscripts
 permalink: /publication/2027-10-1-paper-2dSpatial-number-1

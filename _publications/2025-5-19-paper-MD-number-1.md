@@ -1,5 +1,5 @@
 ---
-title: "Multiplex Depth for Network-Valued Data and Applications"
+title: "Multiplex depth for network-valued data and applications"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-5-19-paper-MD-number-1
