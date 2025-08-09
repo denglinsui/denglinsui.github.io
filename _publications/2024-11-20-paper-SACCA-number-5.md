@@ -5,6 +5,7 @@ category: manuscripts
 permalink: /publication/2024-11-20-paper-SACCA-number-5
 excerpt: 'This paper proposes a new sCCA framework for integrating microbiome data with other high-dimensional omics data, accounting for the compositional nature of microbiome sequencing data. It also allows integrating prior structure information such as the grouping structure among bacterial taxa by imposing a “soft” constraint on the coefficients through varying penalization strength. '
 date: 2024-11-20
+venue: 'Frontiers in Genetics'
 paperurl: 'https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1489694/full'
 ---
 
