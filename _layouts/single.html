@@ -67,12 +67,12 @@ layout: default
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Bibtex</a></p>
         {% elsif page.citation %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Slides</a></p>
         {% elsif page.slidesurl and softwareurl and reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Slides</a> | <a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
         {% elsif softwareurl and reproduceurl %}
           <p style="font-size: smaller"><a href="{{ page.softwareurl }}">Software</a> | <a href="{{ page.reproduceurl }}">Reproducable Code</a></p>
+        {% elsif page.slidesurl %}
+          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Slides</a></p>
         {% elsif softwareurl %}
           <p style="font-size: smaller"><a href="{{ page.softwareurl }}">Software</a></p>
         {% elsif page.bibtexurl %}
