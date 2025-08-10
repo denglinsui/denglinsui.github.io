@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (linkPath !== '/' && normalizedCurrentPath.startsWith(normalizedLinkPath)) {
       isMatch = true;
     }
-    // 首页匹配
+    // 首页匹配 - 只有在真正在首页时才匹配
     else if (linkPath === '/' && (normalizedCurrentPath === '' || normalizedCurrentPath === '/')) {
       isMatch = true;
     }
@@ -58,12 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.add('active');
     }
   });
-
-  // 特殊处理首页（备用方法）
-  if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
-    const homeLink = document.querySelector('.masthead__menu-item--lg a');
-    if (homeLink && !homeLink.classList.contains('active')) {
-      homeLink.classList.add('active');
-    }
-  }
 });
