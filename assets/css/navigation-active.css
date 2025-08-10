@@ -75,6 +75,7 @@ html[data-theme="dark"] .masthead__menu-item--lg a:not(.active):hover {
 .masthead__menu-item--lg a.nav-link.active:hover {
   color: rgb(0, 0, 0) !important; /* 棕色文字 */
   font-weight: bold !important;
+  border-bottom: 2px solid transparent !important; /* 透明下边框 */
   text-decoration: none !important;
 }
 
@@ -83,5 +84,6 @@ html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:visited,
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:hover {
   color: rgb(255, 255, 255) !important; /* 金黄色文字 */
   font-weight: bold !important;
+  border-bottom: 2px solid transparent !important; /* 透明下边框 */
   text-decoration: none !important;
 }
