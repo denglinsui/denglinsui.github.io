@@ -1,0 +1,39 @@
+/* 导航菜单激活状态样式 */
+
+/* 日间模式 - 浅色主题 */
+.masthead__menu-item a.active {
+  color: rgb(28, 112, 133) !important;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(28, 112, 133);
+  transition: all 0.3s ease;
+}
+
+/* 夜间模式 - 深色主题 */
+html[data-theme="dark"] .masthead__menu-item a.active {
+  color: rgb(57, 187, 219) !important;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(57, 187, 219);
+  transition: all 0.3s ease;
+}
+
+/* 悬停效果 */
+.masthead__menu-item a:hover {
+  color: rgb(28, 112, 133) !important;
+  transition: color 0.3s ease;
+}
+
+html[data-theme="dark"] .masthead__menu-item a:hover {
+  color: rgb(57, 187, 219) !important;
+  transition: color 0.3s ease;
+}
+
+/* 确保激活状态在移动端也能正常显示 */
+@media (max-width: 768px) {
+  .masthead__menu-item a.active {
+    background-color: rgba(28, 112, 133, 0.1);
+  }
+  
+  html[data-theme="dark"] .masthead__menu-item a.active {
+    background-color: rgba(57, 187, 219, 0.1);
+  }
+}
