@@ -4,9 +4,9 @@
 .masthead__menu-item a.active,
 .masthead__menu-item a.active:visited,
 .masthead__menu-item a.active:hover {
-  color: rgb(133, 126, 28) !important;
+  color: rgb(173, 57, 22) !important;
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(133, 53, 28) !important;
+  border-bottom: 2px solid rgb(173, 57, 22) !important;
   transition: all 0.3s ease;
   text-decoration: none !important;
 }
@@ -15,21 +15,21 @@
 html[data-theme="dark"] .masthead__menu-item a.active,
 html[data-theme="dark"] .masthead__menu-item a.active:visited,
 html[data-theme="dark"] .masthead__menu-item a.active:hover {
-  color: rgb(219, 187, 57) !important;
+  color: rgb(255, 208, 206) !important;
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(219, 106, 57) !important;
+  border-bottom: 2px solid rgb(255, 208, 206) !important;
   transition: all 0.3s ease;
   text-decoration: none !important;
 }
 
 /* 悬停效果 */
 .masthead__menu-item a:hover:not(.active) {
-  color: rgb(110, 133, 28) !important;
+  color: rgb(159, 184, 67) !important;
   transition: color 0.3s ease;
 }
 
 html[data-theme="dark"] .masthead__menu-item a:hover:not(.active) {
-  color: rgb(57, 187, 219) !important;
+  color: rgb(222, 236, 158) !important;
   transition: color 0.3s ease;
 }
 

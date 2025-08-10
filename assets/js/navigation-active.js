@@ -20,22 +20,48 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('标准化当前路径:', normalizedCurrentPath);
     console.log('标准化链接路径:', normalizedLinkPath);
     
-                    // 检查当前路径是否匹配导航链接
-                if (normalizedCurrentPath === normalizedLinkPath) {
-                    console.log('精确匹配成功，添加active类到:', link.textContent);
-                    link.classList.add('active');
-                } else if (linkPath !== '/' && normalizedCurrentPath.startsWith(normalizedLinkPath)) {
-                    console.log('前缀匹配成功，添加active类到:', link.textContent);
-                    link.classList.add('active');
-                }
+    // 检查当前路径是否匹配导航链接
+    if (normalizedCurrentPath === normalizedLinkPath) {
+      console.log('精确匹配成功，添加active类到:', link.textContent);
+      link.classList.add('active');
+    } else if (linkPath !== '/' && normalizedCurrentPath.startsWith(normalizedLinkPath)) {
+      console.log('前缀匹配成功，添加active类到:', link.textContent);
+      link.classList.add('active');
+    } else if (linkPath === '/' && (normalizedCurrentPath === '' || normalizedCurrentPath === '/')) {
+      console.log('首页匹配成功，添加active类到:', link.textContent);
+      link.classList.add('active');
+    }
   });
   
-  // 特殊处理首页
+  // 特殊处理首页（备用方法）
   if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
     const homeLink = document.querySelector('.masthead__menu-item--lg a');
-    if (homeLink) {
-      console.log('首页匹配成功');
+    if (homeLink && !homeLink.classList.contains('active')) {
+      console.log('首页匹配成功（备用方法）');
       homeLink.classList.add('active');
     }
+  }
+  
+  // 调试信息
+  console.log('页面加载完成，当前激活的链接:');
+  const activeLinks = document.querySelectorAll('.nav-link.active');
+  if (activeLinks.length > 0) {
+    activeLinks.forEach(function(link) {
+      console.log('-', link.textContent, 'href:', link.getAttribute('href'));
+    });
+  } else {
+    console.log('没有找到激活的链接');
+  }
+  
+  // 强制检查CSS是否加载
+  console.log('检查CSS文件是否加载...');
+  const styleSheets = Array.from(document.styleSheets);
+  const navigationCSS = styleSheets.find(sheet => 
+    sheet.href && sheet.href.includes('navigation-active.css')
+  );
+  if (navigationCSS) {
+    console.log('✓ navigation-active.css 已加载');
+  } else {
+    console.log('✗ navigation-active.css 未找到');
   }
 });
