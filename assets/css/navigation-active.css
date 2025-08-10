@@ -7,7 +7,7 @@
 .masthead__menu-item--lg a.active,
 .masthead__menu-item--lg a.active:visited,
 .masthead__menu-item--lg a.active:hover {
-  color: rgb(133, 126, 28) !important; /* 棕色文字 */
+  color: rgb(190, 114, 21) !important; /* 棕色文字 */
   font-weight: bold !important;
   border-bottom: 2px solid rgb(133, 53, 28) !important; /* 橙色下边框 */
   transition: all 0.3s ease;
@@ -21,9 +21,9 @@ html[data-theme="dark"] .masthead__menu-item a.active:hover,
 html[data-theme="dark"] .masthead__menu-item--lg a.active,
 html[data-theme="dark"] .masthead__menu-item--lg a.active:visited,
 html[data-theme="dark"] .masthead__menu-item--lg a.active:hover {
-  color: rgb(219, 187, 57) !important; /* 金黄色文字 */
+  color: rgb(248, 218, 167) !important; /* 金黄色文字 */
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(219, 106, 57) !important; /* 橙红色下边框 */
+  border-bottom: 2px solid rgb(252, 172, 138) !important; /* 橙红色下边框 */
   transition: all 0.3s ease;
   text-decoration: none !important;
 }
@@ -31,14 +31,14 @@ html[data-theme="dark"] .masthead__menu-item--lg a.active:hover {
 /* 悬停效果 - 增强版本 */
 .masthead__menu-item a:hover:not(.active),
 .masthead__menu-item--lg a:hover:not(.active) {
-  color: rgb(110, 133, 28) !important; /* 绿色悬停 */
+  color: rgb(188, 217, 25) !important; /* 绿色悬停 */
   transition: color 0.3s ease;
   text-decoration: none !important;
 }
 
 html[data-theme="dark"] .masthead__menu-item a:hover:not(.active),
 html[data-theme="dark"] .masthead__menu-item--lg a:hover:not(.active) {
-  color: rgb(57, 187, 219) !important; /* 青色悬停 */
+  color: rgb(241, 251, 183) !important; /* 青色悬停 */
   transition: color 0.3s ease;
   text-decoration: none !important;
 }
@@ -46,13 +46,13 @@ html[data-theme="dark"] .masthead__menu-item--lg a:hover:not(.active) {
 /* 确保悬停效果在所有状态下都能工作 */
 .masthead__menu-item a:not(.active):hover,
 .masthead__menu-item--lg a:not(.active):hover {
-  color: rgb(110, 133, 28) !important;
+  color: rgb(177, 224, 22) !important;
   transition: color 0.3s ease;
 }
 
 html[data-theme="dark"] .masthead__menu-item a:not(.active):hover,
 html[data-theme="dark"] .masthead__menu-item--lg a:not(.active):hover {
-  color: rgb(57, 187, 219) !important;
+  color: rgb(253, 255, 197) !important;
   transition: color 0.3s ease;
 }
 
@@ -69,22 +69,21 @@ html[data-theme="dark"] .masthead__menu-item--lg a:not(.active):hover {
   }
 }
 
-/* 强制覆盖首页链接的默认样式 
+/* 强制覆盖首页链接的默认样式 */
 .masthead__menu-item--lg a.nav-link.active,
 .masthead__menu-item--lg a.nav-link.active:visited,
 .masthead__menu-item--lg a.nav-link.active:hover {
-  color: rgb(133, 126, 28) !important; 
+  color: rgb(0, 0, 0) !important; /* 棕色文字 */
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(133, 53, 28) !important; 
+  border-bottom: 2px solid rgb(0, 0, 0) !important; /* 橙色下边框 */
   text-decoration: none !important;
 }
 
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active,
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:visited,
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:hover {
-  color: rgb(219, 187, 57) !important; 
+  color: rgb(255, 255, 255) !important; /* 金黄色文字 */
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(219, 106, 57) !important; 
+  border-bottom: 2px solid rgb(255, 255, 255) !important; /* 橙红色下边框 */
   text-decoration: none !important;
 }
-*/
