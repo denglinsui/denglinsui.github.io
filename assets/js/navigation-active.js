@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (linkPath !== '/' && normalizedCurrentPath.startsWith(normalizedLinkPath)) {
       isMatch = true;
     }
-    // 首页匹配 - 只有在真正在首页时才匹配
+    // 首页匹配 - 只有在真正在首页时才匹配，但首页链接不添加active类
     else if (linkPath === '/' && (normalizedCurrentPath === '' || normalizedCurrentPath === '/')) {
-      isMatch = true;
+      // 首页链接在首页时不添加active类
+      isMatch = false;
     }
 
     if (isMatch) {
