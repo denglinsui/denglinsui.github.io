@@ -69,21 +69,22 @@ html[data-theme="dark"] .masthead__menu-item--lg a:not(.active):hover {
   }
 }
 
-/* 强制覆盖首页链接的默认样式 */
+/* 强制覆盖首页链接的默认样式 
 .masthead__menu-item--lg a.nav-link.active,
 .masthead__menu-item--lg a.nav-link.active:visited,
 .masthead__menu-item--lg a.nav-link.active:hover {
-  color: rgb(133, 126, 28) !important; /* 棕色文字 */
+  color: rgb(133, 126, 28) !important; 
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(133, 53, 28) !important; /* 橙色下边框 */
+  border-bottom: 2px solid rgb(133, 53, 28) !important; 
   text-decoration: none !important;
 }
 
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active,
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:visited,
 html[data-theme="dark"] .masthead__menu-item--lg a.nav-link.active:hover {
-  color: rgb(219, 187, 57) !important; /* 金黄色文字 */
+  color: rgb(219, 187, 57) !important; 
   font-weight: bold !important;
-  border-bottom: 2px solid rgb(219, 106, 57) !important; /* 橙红色下边框 */
+  border-bottom: 2px solid rgb(219, 106, 57) !important; 
   text-decoration: none !important;
 }
+*/
