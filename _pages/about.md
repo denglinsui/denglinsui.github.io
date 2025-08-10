@@ -11,8 +11,14 @@ Short Bio
 ------
 
 <style>
+/* 日间模式 - 浅色主题 */
 h2 {
-  color: #86ffff !important;
+  color:rgb(28, 112, 133) !important;
+}
+
+/* 夜间模式 - 深色主题 */
+html[data-theme="dark"] h2 {
+  color:rgb(57, 187, 219) !important;
 }
 </style>
 
