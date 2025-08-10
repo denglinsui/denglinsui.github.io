@@ -12,10 +12,14 @@ redirect_from:
 Education
 ======
 * Ph.D. in Statistics, Renmin University of China, 2024
+  * Thesis: Multiple hypothesis testing using structural information with applications
+
 * B.S. in Mathematics and Applied Mathmatics, Sun-Yat Sen University , 2019
 
 Work experience
 ======
+* 2024 March to June: Visiting Student, The Chinse University of Hong Kong (Shenzhen)
+
 * 2024 Sep to Now: Postdoctoral Researcher, The Chinse University of Hong Kong (Shenzhen)
 
 * 2018 Summer: Investment Assistant (Intern), YUEXIU Industrial Investment Fund Management Co., Ltd.
@@ -23,7 +27,7 @@ Work experience
   
 Publications
 ======
-  
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
