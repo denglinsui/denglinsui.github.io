@@ -37,7 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 标准化路径（移除末尾的斜杠进行比较）
     const normalizedCurrentPath = currentPath.replace(/\/$/, '');
-    const normalizedLinkPath = linkPath.replace(/\/$/, '');
+    
+    // 处理链接路径：如果是完整URL，提取路径部分
+    let normalizedLinkPath;
+    if (linkPath.startsWith('http')) {
+      // 如果是完整URL，提取路径部分
+      const url = new URL(linkPath);
+      normalizedLinkPath = url.pathname.replace(/\/$/, '');
+    } else {
+      // 如果是相对路径，直接使用
+      normalizedLinkPath = linkPath.replace(/\/$/, '');
+    }
 
     console.log(`  标准化: "${normalizedCurrentPath}" vs "${normalizedLinkPath}"`);
 
