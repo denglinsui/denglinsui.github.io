@@ -22,7 +22,7 @@ html[data-theme="dark"] h2 {
 }
 </style>
 
-I am a postdoctoral researcher at [School of Data Science, Chinese University of Hong Kong (Shen Zhen)](https://sds.cuhk.edu.cn) under the under the supervision of Professor [C. F. Jeff Wu](https://myweb.cuhk.edu.cn/jeffwu) and Professor [Jianhua Huang](https://sds.cuhk.edu.cn/en/teacher/470). 
+I am a postdoctoral researcher at [School of Data Science, Chinese University of Hong Kong (Shen Zhen)](https://sds.cuhk.edu.cn) under the supervision of Professor [C. F. Jeff Wu](https://myweb.cuhk.edu.cn/jeffwu) and Professor [Jianhua Huang](https://sds.cuhk.edu.cn/en/teacher/470). 
 
 Before that, I received my Ph.D. degree in Statistics from [Institute of Statistics and Big Data, Renmin University of China](http://isbd.ruc.edu.cn) in 2024, where I was fortunate to be advised by Professor [Kejun He](http://isbd.ruc.edu.cn/sztd/c649d51f7a9d4557b25db81b705037e1.htm) . I also gained valuable guidance from Professor [Xianyan Zhang](https://zhangxiany-tamu.github.io/) at Texas A&M University.
 
