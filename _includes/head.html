@@ -18,5 +18,8 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/navigation-active.css">
+{% if page.url == "/publications/" or page.url == "/teaching/" %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/research-list.css">
+{% endif %}
 
 <meta http-equiv="cleartype" content="on">

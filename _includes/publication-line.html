@@ -1,0 +1,14 @@
+{% include base_path %}
+<li class="research-line" itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <a class="research-line__title" href="{{ base_path }}{{ post.url }}" itemprop="name">{{ post.title }}</a>.
+  <span class="research-line__authors" itemprop="author">
+    {% for author in post.authors %}<span{% if author.self %} class="research-line__self"{% endif %}>{{ author.name }}</span>{% if author.equal %}<sup aria-label="co-first author">†</sup>{% endif %}{% if author.corresponding %}<sup aria-label="corresponding author">*</sup>{% endif %}{% unless forloop.last %}{% if forloop.length == 2 %} and {% elsif forloop.rindex == 2 %}, and {% else %}, {% endif %}{% endunless %}{% endfor %}.
+  </span>
+  <em itemprop="isPartOf">{{ post.venue }}</em>{% if post.citation_details %}, {{ post.citation_details }}{% endif %}, {{ post.date | date: "%Y" }}.
+  <span class="research-line__links">
+    {% if post.paperurl %}<a href="{{ post.paperurl }}">[paper]</a>{% endif %}
+    {% if post.softwareurl %}<a href="{{ post.softwareurl }}">[code]</a>{% endif %}
+    {% if post.reproduceurl %}<a href="{{ post.reproduceurl }}">[reproducibility]</a>{% endif %}
+    {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[slides]</a>{% endif %}
+  </span>
+</li>

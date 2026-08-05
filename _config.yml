@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Linsui Deng"
 title_separator          : "-"
 name                     : &name "Linsui Deng"
-description              : &description "Postdoctoral Researcher"
+description              : &description "Assistant Professor of Statistics"
 url                      : https://denglinsui.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "denglinsui/academicpages.github.io"
@@ -25,11 +25,11 @@ author:
   avatar           : "Linsui.jpg"
   name             : "邓淋穗"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoctoral Researcher"
-  location         : "Shenzhen, China"
-  employer         : "CUHK, SZ"
+  bio              : "Assistant Professor"
+  location         : "Changsha, China"
+  employer         : "Central South University"
   uri              : # URL
-  email            : "denglinsui@cuhk.edu.cn" 
+  email            : "denglinsui@csu.edu.cn"
 
   # Academic websites
   academia         : # URL
@@ -227,7 +227,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

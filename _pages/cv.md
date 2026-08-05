@@ -18,22 +18,10 @@ Education
 
 Work experience
 ======
-* 2024 March to June: Visiting Student, The Chinse University of Hong Kong (Shenzhen)
+* 2026 to present: Assistant Professor, School of Mathematics and Statistics, Central South University
 
-* 2024 Sep to Now: Postdoctoral Researcher, The Chinse University of Hong Kong (Shenzhen)
+* 2024 to 2026: Postdoctoral Researcher, School of Data Science, The Chinese University of Hong Kong, Shenzhen
+
+* March to June 2024: Visiting Student, School of Data Science, The Chinese University of Hong Kong, Shenzhen
 
 * 2018 Summer: Investment Assistant (Intern), YUEXIU Industrial Investment Fund Management Co., Ltd.
-
-  
-Publications
-======
-
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>

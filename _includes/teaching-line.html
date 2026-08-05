@@ -1,0 +1,7 @@
+<li class="research-line" itemscope itemtype="https://schema.org/Course">
+  <strong itemprop="name">{{ post.title }}</strong>.
+  <span>{{ post.type }}</span>,
+  <span itemprop="provider">{{ post.venue }}</span>,
+  <span>{{ post.location }}</span>,
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>.
+</li>

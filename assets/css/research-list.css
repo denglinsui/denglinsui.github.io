@@ -1,0 +1,50 @@
+.research-legend {
+  margin: 0 0 1.75rem;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+}
+
+.research-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.research-line {
+  margin: 0 0 0.65rem;
+  padding-left: 0.15rem;
+  line-height: 1.55;
+}
+
+.research-line__title {
+  font-weight: 600;
+}
+
+.research-line__self {
+  font-weight: 700;
+}
+
+.research-line__links {
+  white-space: nowrap;
+}
+
+.research-line__links a {
+  margin-left: 0.15rem;
+  font-size: 0.9em;
+}
+
+.research-line sup,
+.research-legend sup {
+  position: relative;
+  top: -0.15em;
+  font-size: 0.72em;
+}
+
+@media (max-width: 600px) {
+  .research-list {
+    padding-left: 1rem;
+  }
+
+  .research-line {
+    line-height: 1.65;
+  }
+}
